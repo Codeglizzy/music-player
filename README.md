@@ -37,5 +37,6 @@ Let me know if you run into any issues not listed below!
 Here is a list of known issues/bugs that I'm working on:
 * Only supports .wav files.
 * Unable to resize window properly without disturbing other controls.
+* Currently only able to browse 1 directory at a time.
 
 
