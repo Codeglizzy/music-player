@@ -19,7 +19,7 @@ Here is what it will look like with music filled:
 
 That is all for the hard stuff. 
 
-From here on out, the program is fairly intuitive. 
+From here on out, the program is fairly intuitive. Select a song from either of the list box panels on the right and click "Play Song"!
 
 * The slider is the volume bar.
 * The blue text box displays the selected song name.
