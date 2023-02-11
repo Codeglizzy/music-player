@@ -25,7 +25,7 @@ From here on out, the program is fairly intuitive.
 * The blue text box displays the selected song name.
 * "Browse Directory" Displays the Folder Browser Dialog so you can easily navigate to your music.
 * "Play Song" Plays the selected song.
-* "Stop" Is what it says. It will stop the song currently playing.
+* "Stop" Will stop the song currently playing.
 
 ### That's the Magic!
 
