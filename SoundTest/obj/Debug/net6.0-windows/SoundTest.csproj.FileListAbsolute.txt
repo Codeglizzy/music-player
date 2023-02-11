@@ -18,3 +18,4 @@ F:\Variety Projects\SoundTest\SoundTest\SoundTest\obj\Debug\net6.0-windows\ref\S
 F:\Variety Projects\SoundTest\SoundTest\SoundTest\obj\Debug\net6.0-windows\SoundTest.Properties.Resources.resources
 F:\Variety Projects\SoundTest\SoundTest\SoundTest\obj\Debug\net6.0-windows\Interop.WMPLib.dll
 F:\Variety Projects\SoundTest\SoundTest\SoundTest\obj\Debug\net6.0-windows\SoundTest.csproj.ResolveComReference.cache
+F:\Variety Projects\SoundTest\SoundTest\SoundTest\obj\Debug\net6.0-windows\Interop.MediaPlayer.dll

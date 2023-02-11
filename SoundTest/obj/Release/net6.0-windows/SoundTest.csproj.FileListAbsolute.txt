@@ -18,3 +18,4 @@ F:\Variety Projects\SoundTest\SoundTest\SoundTest\obj\Release\net6.0-windows\ref
 F:\Variety Projects\SoundTest\SoundTest\SoundTest\obj\Release\net6.0-windows\SoundTest.pdb
 F:\Variety Projects\SoundTest\SoundTest\SoundTest\obj\Release\net6.0-windows\SoundTest.genruntimeconfig.cache
 F:\Variety Projects\SoundTest\SoundTest\SoundTest\obj\Release\net6.0-windows\ref\SoundTest.dll
+F:\Variety Projects\SoundTest\SoundTest\SoundTest\obj\Release\net6.0-windows\Interop.MediaPlayer.dll

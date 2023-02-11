@@ -50,15 +50,17 @@ namespace SoundTest
                 textBox1.Text = folderDlg.SelectedPath;
                 soundPath = folderDlg.SelectedPath;
                 DirectoryInfo dinfo = new DirectoryInfo(soundPath);
-                FileInfo[] Files = dinfo.GetFiles("*.wav");
+                FileInfo[] Files = dinfo.GetFiles("*.*");
                 foreach (FileInfo file in Files)
                 {
-                    if (!listBox1.Items.Contains(file.FullName))
+                    if (file.Extension == ".wav" || file.Extension == ".mp3")
                     {
-                        listBox2.Items.Add(file.FullName);
-                        listBox1.Items.Add(file.Name);
+                        if (!listBox1.Items.Contains(file.FullName))
+                        {
+                            listBox2.Items.Add(file.FullName);
+                            listBox1.Items.Add(file.Name);
+                        }
                     }
-                    
                 }
             }
 
@@ -102,6 +104,90 @@ namespace SoundTest
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBox1.SelectedIndex = listBox2.SelectedIndex;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+            if (Player.playState == WMPPlayState.wmppsPlaying)
+            {
+                
+                
+                if((listBox2.SelectedIndex + 1) < listBox2.Items.Count)
+                {
+                    Player.controls.stop();
+                    listBox2.SelectedIndex++;
+                    Player.URL = listBox2.SelectedItem.ToString();
+                    Player.controls.play();
+                }
+                else
+                {
+                    Player.controls.stop();
+                    listBox2.SelectedIndex = 0;
+                    Player.URL = listBox2.SelectedItem.ToString();
+                    Player.controls.play();
+                }
+            }
+            else
+            {
+                if ((listBox2.SelectedIndex + 1) < listBox2.Items.Count)
+                {
+                    listBox2.SelectedIndex++;
+                    Player.URL = listBox2.SelectedItem.ToString();
+                    Player.controls.play();
+                }
+                else
+                {
+                    listBox2.SelectedIndex = 0;
+                    Player.URL = listBox2.SelectedItem.ToString();
+                    Player.controls.play();
+                }
+            }
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            if (Player.playState == WMPPlayState.wmppsPlaying)
+            {
+                if(Player.controls.currentPosition > 5)
+                {
+                    Player.controls.stop();
+                    Player.controls.currentPosition = 0;
+                    Player.controls.play();
+                    return;
+                }
+
+                
+                if ((listBox2.SelectedIndex - 1) >= 0)
+                {
+                    Player.controls.stop();
+                    listBox2.SelectedIndex--;
+                    Player.URL = listBox2.SelectedItem.ToString();
+                    Player.controls.play();
+                }
+                else
+                {
+                    Player.controls.stop();
+                    listBox2.SelectedIndex = listBox2.Items.Count - 1;
+                    Player.URL = listBox2.SelectedItem.ToString();
+                    Player.controls.play();
+                }
+            }
+            else
+            {
+                if ((listBox2.SelectedIndex - 1) >= 0)
+                {
+                    listBox2.SelectedIndex--;
+                    Player.URL = listBox2.SelectedItem.ToString();
+                    Player.controls.play();
+                }
+                else
+                {
+                    listBox2.SelectedIndex = listBox2.Items.Count - 1;
+                    Player.URL = listBox2.SelectedItem.ToString();
+                    Player.controls.play();
+                }
+            }
         }
     }
 }
