@@ -4,9 +4,9 @@ This is a simple music player put together to allow me to quickly access my libr
 
 # How it Works
 
-Simple, open the solution in Visual Studio C# Forms and compile the solution. I will be adding an executable to allow for easier use the in the future.
+You can either compile the solution in Visual Studio, or you can navigate to the `\bin\Release\net6.0-windows\` folder and launch the `SoundTest - Shortcut` executable. 
 
-After compiling the program you should see this screen:
+After launching (or compiling), you should see this screen:
 
 ![This is an Image](https://github.com/Codeglizzy/music-player/blob/main/SoundTest/interfaceExample.png?raw=true)
 
